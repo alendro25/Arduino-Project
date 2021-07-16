@@ -30,7 +30,7 @@ void setup()
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
   dht.begin();
-  timer.setInterval(1000L, sendSensor);
+  timer.setInterval(2000L, sendSensor);
 }
 
 BLYNK_WRITE(V1) { 
