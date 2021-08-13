@@ -11,6 +11,17 @@ int chk;
 float hum;  //Stores humidity value
 float temp; //Stores temperature value
 
+byte derajat[8] = {
+  B00110,
+  B01001,
+  B01001,
+  B00110,
+  B00000,
+  B00000,
+  B00000,
+  B00000
+};
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -18,6 +29,7 @@ void setup() {
   lcd.init();
   //  Print a message to the LCD
   lcd.backlight();
+  lcd.createChar(0, derajat);
   lcd.setCursor(0,1);
   lcd.print("Monitoring");
   lcd.setCursor(14,1);
@@ -51,6 +63,8 @@ void loop() {
     lcd.print("Temp:");
     lcd.setCursor(7,2);
     lcd.print(temp);
-    lcd.setCursor(12,2);
-    lcd.print(" Celsius");
+    lcd.setCursor(13,2);
+    lcd.write((byte)0);
+    lcd.setCursor(14,2);
+    lcd.print("C");
 }

@@ -15,9 +15,9 @@ void loop() {
   nilai = digitalRead(sensor);
   Serial.println(nilai);
   if(nilai == LOW){
-    digitalWrite(7, HIGH);
-    delay(3000);
-  }else{
     digitalWrite(7, LOW);
+    delay(2000);
+  }else{
+    digitalWrite(7, HIGH);
   }
 }

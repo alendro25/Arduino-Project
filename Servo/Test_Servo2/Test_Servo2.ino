@@ -3,9 +3,9 @@ Servo myservo;
 int pos = 0;
 
 void setup() {
-  myservo.attach(2);
+  myservo.attach(9);
   Serial.begin(9600);
-  myservo.write(0);
+  myservo.write(90);
 
   Serial.println("Mengatur Arah Servo :");
 }
