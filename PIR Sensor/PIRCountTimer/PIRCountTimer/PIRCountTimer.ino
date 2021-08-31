@@ -15,7 +15,6 @@ int nilaiPir;
 
 void setup() {
   Serial.begin(9600);
-  Serial.begin(9600);
   rtc.begin();
   lcd.init();
   lcd.backlight();
