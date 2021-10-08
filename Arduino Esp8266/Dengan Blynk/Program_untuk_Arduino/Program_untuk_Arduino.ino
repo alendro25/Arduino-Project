@@ -3,7 +3,7 @@ SoftwareSerial mySerial(10,11); // RX, TX
 
 String data;
 char c;
-const int relay = 13;
+const int relay = 12;
 
 int pot = A0;
 int valPot;
@@ -14,6 +14,7 @@ void setup() {
   Serial.begin(115200);
   mySerial.begin(115200);
   pinMode(relay, OUTPUT);
+  digitalWrite(relay, HIGH);
   delay(10);
 }
 

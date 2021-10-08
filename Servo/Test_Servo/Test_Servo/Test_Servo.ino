@@ -5,7 +5,7 @@ int nilai = 0;
 
 void setup() {
   myservo.attach(9); // Harus Pin PWM
-  myservo2.attach(6); // Harus Pin PWM
+  myservo2.attach(5); // Harus Pin PWM
   Serial.begin(9600);
   myservo.write(0);
 }
