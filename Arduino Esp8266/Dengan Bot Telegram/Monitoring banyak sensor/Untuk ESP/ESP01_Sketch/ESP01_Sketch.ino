@@ -59,8 +59,6 @@ void loop() {
 
   if (data.length() > 15){ // Jika panjang data lebih dari 15 karakter alias monitor status semua sensor Arduino
     // Membuat parsing (memisah/memecah) data dari arduino
-    String lihat = data;
-    Serial.print(lihat);
     int index = 0;
       for (int i = 0; i < data.length(); i++){
         char delimiter  = '#'; // Pembatas data yg akan diolah
