@@ -25,12 +25,12 @@ void loop() {
     pesan = sim.readStringUntil('\n');
     Serial.println(pesan);
 
-    if(pesan == "Hai\r"){
+    if(pesan == "Nyala\r"){
       digitalWrite(led, HIGH);
       eksekusi(1);
       Serial.println("Led Menyala");
     }
-    if(pesan == "A\r"){
+    if(pesan == "Mati\r"){
       digitalWrite(led, LOW);
       eksekusi(0);
       Serial.println("Led Mati");
