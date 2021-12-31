@@ -1,4 +1,4 @@
-int ledPower = 3;
+int ledPower = 5;
 int measurePin = A0;
 int samplingTime = 280;
 int sleepTime = 100;
@@ -29,4 +29,5 @@ void loop() {
       Serial.print(" - Dust Density: ");
       Serial.print(dustDensity);
       Serial.println(" Kg/m3");
+      delay(1000);
 }

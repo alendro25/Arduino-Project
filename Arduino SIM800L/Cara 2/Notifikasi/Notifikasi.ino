@@ -41,7 +41,7 @@ void setup()
   sim.println("AT+CMGF=1");
   sim.println("AT+CNMI=1,2,0,0,0");
 
-  for(int i = 0; i < 5; i++){
+  for(int i = 0; i < 10; i++){
     Serial.print(i);
     delay(1000);
   }
@@ -127,8 +127,9 @@ void eksekusi(int tipe){
     sim.print("Kondisi filter : ");
     sim.print(Persen);
     sim.println("%");
-    sim.print("Led Hijau : ");
-    sim.print(Status);
+    sim.print("Lakukan Pengecekan Secara Berkala Agar Kondisi Filter Udara Tetap Bersih");
+//    sim.print("Led Hijau : ");
+//    sim.print(Status);
   }
    else if(tipe == 4){
     cekSuhu();
