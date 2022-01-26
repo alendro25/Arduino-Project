@@ -50,7 +50,7 @@ void loop() {
   delayMicroseconds(9680);
  
   //measure your 5v and change below
-  calcVoltage = voltsMeasured * (5.0 / 1024.0);
+  calcVoltage = voltsMeasured * (5.0 / 1024.0); // Mengubah nilai integer menjadi float 0.0 - 5.0 volts
   dustDensity = 0.17 * calcVoltage - 0.1;
   delay(1000);
 
