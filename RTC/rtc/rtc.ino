@@ -13,8 +13,8 @@ void setup() {
   rtc.begin();
 
 //  rtc.setDOW(THURSDAY);
-//  rtc.setDate(22, 7, 2021);
-//  rtc.setTime(11, 23, 00);
+//  rtc.setDate(2, 6, 2022);
+//  rtc.setTime(14, 41, 00);
 }
 
 void loop() {

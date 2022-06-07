@@ -1,0 +1,4 @@
+1. Buka Aplikasi Arduino
+2. Pilih Menu "Sketch" > Include Library > Add .Zip Library
+3. Pilih DS3231.zip pada direktori dimana Anda menyimpan file zip tersebut
+4. Library berhasil di tambahkan
