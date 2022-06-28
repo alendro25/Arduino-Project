@@ -12,9 +12,9 @@ void setup() {
   Serial.begin(9600);
   rtc.begin();
 
-//  rtc.setDOW(THURSDAY);
-//  rtc.setDate(2, 6, 2022);
-//  rtc.setTime(14, 41, 00);
+  rtc.setDOW(SATURDAY);
+  rtc.setDate(18, 6, 2022);
+  rtc.setTime(16, 19, 18);
 }
 
 void loop() {

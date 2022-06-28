@@ -33,7 +33,7 @@ void loop() {
 
   // Cek kondisi ruangan untuk penerangan otomatis
   ruang_405();
-  ruang_406();
+//  ruang_406();
 
   /*Nama_Function(Hari, Waktu Nyala (HH, MM), Waktu Mati (HH, MM), MATKUL)
   Hari(English - Awal Kapital) : Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday */
