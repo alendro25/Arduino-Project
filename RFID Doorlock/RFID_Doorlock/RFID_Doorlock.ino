@@ -5,6 +5,7 @@
 #define RST_PIN 9
 #define LED_HIJAU 7 //akses diterima LED BIRU pin
 #define LED_MERAH 8 //akses ditolak LED BIRU pin
+#define LED_KUNING 5 //LED Standby
 #define BUZZER 4 //buzzer pin
 #define RELAY 2 //relay pin
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
@@ -16,9 +17,11 @@ void setup()
   mfrc522.PCD_Init();   // Initiate MFRC522
   pinMode(LED_HIJAU, OUTPUT);
   pinMode(LED_MERAH, OUTPUT);
+  pinMode(LED_KUNING, OUTPUT);
   pinMode(RELAY, OUTPUT);
   pinMode(BUZZER, OUTPUT);
   digitalWrite(RELAY, HIGH);
+  digitalWrite(LED_KUNING, LOW);
   noTone(BUZZER);
   Serial.println("Put your card to the reader...");
   Serial.println();
@@ -26,6 +29,7 @@ void setup()
 }
 void loop() 
 {
+  digitalWrite(LED_KUNING, HIGH);
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
@@ -52,6 +56,7 @@ void loop()
   content.toUpperCase();
   if (content.substring(1) == "04 0A 4B 8A 38 58 80" || content.substring(1) == "59 F4 E4 43") //change here the UID of the card/cards that you want to give access
   {
+    digitalWrite(LED_KUNING, LOW);
     Serial.println("akses kartu diterima");
     Serial.println();
     delay(500);
@@ -63,9 +68,8 @@ void loop()
     delay(5000);
     digitalWrite(RELAY, HIGH);
     digitalWrite(LED_HIJAU, LOW);
-  }
- 
- else   {
+  } else   {
+    digitalWrite(LED_KUNING, LOW);
     Serial.println("akses kartu ditolak");
     digitalWrite(LED_MERAH, HIGH);
     digitalWrite(RELAY, HIGH);
@@ -75,4 +79,5 @@ void loop()
     digitalWrite(LED_HIJAU, LOW);
     noTone(BUZZER);
   }
+  
 }
